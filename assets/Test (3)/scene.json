@@ -1,0 +1,555 @@
+{
+  "formatVersion": 1,
+  "nodes": [
+    {
+      "id": "0",
+      "name": "car",
+      "children": [
+        {
+          "id": "15",
+          "name": "Car prefab",
+          "children": [],
+          "components": [],
+          "position": {
+            "x": -1.1102230246251565e-16,
+            "y": -2.220446049250313e-16,
+            "z": 0.08832883834838867
+          },
+          "orientation": {
+            "x": 0.4999999999999999,
+            "y": 0.5,
+            "z": 0.5,
+            "w": 0.5000000000000001
+          },
+          "scale": {
+            "x": 0.25,
+            "y": 0.25,
+            "z": 0.25
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": {
+            "sceneAssetId": "15"
+          }
+        }
+      ],
+      "components": [
+        {
+          "type": "Behavior",
+          "config": {
+            "behaviorName": "CarBehavior",
+            "propertyValues": {}
+          },
+          "id": "1"
+        },
+        {
+          "type": "CannonBody",
+          "config": {
+            "mass": 1,
+            "fixedRotation": false,
+            "offset": {
+              "x": 0.17,
+              "y": 0,
+              "z": 0.08
+            },
+            "shape": "box",
+            "halfSize": {
+              "x": 0.49,
+              "y": 0.3,
+              "z": 0.22
+            },
+            "radius": 1,
+            "height": 1
+          },
+          "id": "4"
+        }
+      ],
+      "position": {
+        "x": -0.6422314643859863,
+        "y": -0.9528698325157166,
+        "z": 0.5
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0.7071067811865475,
+        "w": 0.7071067811865476
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    },
+    {
+      "id": "5",
+      "name": "camera anchor",
+      "children": [
+        {
+          "id": "1",
+          "name": "camera",
+          "children": [],
+          "components": [
+            {
+              "type": "Camera",
+              "config": {
+                "mode": "perspective",
+                "fov": 45,
+                "orthographicScale": 10,
+                "viewport": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 1,
+                  "height": 1
+                },
+                "depth": 0,
+                "nearClippingPlane": 0.1,
+                "farClippingPlane": 1000
+              },
+              "id": "0"
+            }
+          ],
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 10
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        }
+      ],
+      "components": [
+        {
+          "type": "Behavior",
+          "config": {
+            "behaviorName": "FollowObjectBehavior",
+            "propertyValues": {
+              "actorName": {
+                "type": "string",
+                "value": "car"
+              }
+            }
+          },
+          "id": "0"
+        }
+      ],
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0.5
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    },
+    {
+      "id": "2",
+      "name": "city",
+      "children": [
+        {
+          "id": "11",
+          "name": "map",
+          "children": [],
+          "components": [
+            {
+              "type": "ModelRenderer",
+              "config": {
+                "modelAssetId": "11",
+                "animationId": null,
+                "castShadow": false,
+                "receiveShadow": true,
+                "color": "ffffff",
+                "overrideOpacity": false,
+                "opacity": null,
+                "materialType": "phong",
+                "shaderAssetId": null
+              },
+              "id": "0"
+            }
+          ],
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0.5
+          },
+          "orientation": {
+            "x": 0.7071067811865475,
+            "y": 5.551115123125783e-17,
+            "z": 5.551115123125783e-17,
+            "w": 0.7071067811865475
+          },
+          "scale": {
+            "x": 2.7,
+            "y": 2,
+            "z": 2.7
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "7",
+          "name": "building1",
+          "children": [
+            {
+              "id": "8",
+              "name": "model",
+              "children": [],
+              "components": [
+                {
+                  "type": "ModelRenderer",
+                  "config": {
+                    "modelAssetId": "10",
+                    "animationId": null,
+                    "castShadow": true,
+                    "receiveShadow": true,
+                    "color": "babbdc",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "phong",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0.4999999999999999,
+                "y": 0.5,
+                "z": 0.5,
+                "w": 0.5000000000000001
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "CannonBody",
+              "config": {
+                "mass": 0,
+                "fixedRotation": false,
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 1
+                },
+                "shape": "box",
+                "halfSize": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "radius": 1,
+                "height": 1
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": -0.25737619400024414,
+            "y": 4.993445456027985,
+            "z": 0.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "12",
+          "name": "building1",
+          "children": [
+            {
+              "id": "13",
+              "name": "model",
+              "children": [],
+              "components": [
+                {
+                  "type": "ModelRenderer",
+                  "config": {
+                    "modelAssetId": "10",
+                    "animationId": null,
+                    "castShadow": true,
+                    "receiveShadow": true,
+                    "color": "ff888b",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "phong",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0.4999999999999999,
+                "y": 0.5,
+                "z": 0.5,
+                "w": 0.5000000000000001
+              },
+              "scale": {
+                "x": 0.9,
+                "y": 1.1,
+                "z": 0.9
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "CannonBody",
+              "config": {
+                "mass": 0,
+                "fixedRotation": false,
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 1
+                },
+                "shape": "box",
+                "halfSize": {
+                  "x": 0.9,
+                  "y": 0.9,
+                  "z": 1
+                },
+                "radius": 1,
+                "height": 1
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": -0.25737619400024414,
+            "y": 2.89955598115921,
+            "z": 0.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        }
+      ],
+      "components": [],
+      "position": {
+        "x": -1.0133451223373413,
+        "y": -0.8194127678871155,
+        "z": 0
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    },
+    {
+      "id": "14",
+      "name": "lightAnchor",
+      "children": [
+        {
+          "id": "10",
+          "name": "ambiant light",
+          "children": [],
+          "components": [
+            {
+              "type": "Light",
+              "config": {
+                "type": "directional",
+                "color": "ffffff",
+                "intensity": 1,
+                "distance": 0,
+                "angle": 60,
+                "target": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "castShadow": true,
+                "shadowMapSize": {
+                  "width": 700,
+                  "height": 700
+                },
+                "shadowBias": 0,
+                "shadowDarkness": 1,
+                "shadowCameraNearPlane": 0.1,
+                "shadowCameraFarPlane": 200,
+                "shadowCameraFov": 50,
+                "shadowCameraSize": {
+                  "top": 8,
+                  "bottom": -8,
+                  "left": -8,
+                  "right": 8
+                }
+              },
+              "id": "1"
+            },
+            {
+              "type": "Behavior",
+              "config": {
+                "behaviorName": "LightTargetSetterBehavior",
+                "propertyValues": {}
+              },
+              "id": "2"
+            }
+          ],
+          "position": {
+            "x": -13.472089767456055,
+            "y": -18.08754539489746,
+            "z": 19.24237823486328
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        }
+      ],
+      "components": [
+        {
+          "type": "Behavior",
+          "config": {
+            "behaviorName": "FollowObjectBehavior",
+            "propertyValues": {
+              "actorName": {
+                "type": "string",
+                "value": "car"
+              }
+            }
+          },
+          "id": "0"
+        },
+        {
+          "type": "Light",
+          "config": {
+            "type": "ambient",
+            "color": "7f7f7f",
+            "intensity": 1,
+            "distance": 0,
+            "angle": 60,
+            "target": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "castShadow": false,
+            "shadowMapSize": {
+              "width": 512,
+              "height": 512
+            },
+            "shadowBias": 0,
+            "shadowDarkness": 0.5,
+            "shadowCameraNearPlane": 0.1,
+            "shadowCameraFarPlane": 1000,
+            "shadowCameraFov": 50,
+            "shadowCameraSize": {
+              "top": 100,
+              "bottom": -100,
+              "left": -100,
+              "right": 100
+            }
+          },
+          "id": "1"
+        }
+      ],
+      "position": {
+        "x": -0.6422314643859863,
+        "y": -0.9528698325157166,
+        "z": 0.5
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    }
+  ]
+}

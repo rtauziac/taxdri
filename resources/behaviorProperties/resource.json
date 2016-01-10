@@ -1,0 +1,44 @@
+{
+  "behaviors": {
+    "CarBehavior": {
+      "scriptId": "2",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "speed",
+          "type": "number"
+        },
+        {
+          "name": "acceleration",
+          "type": "number"
+        },
+        {
+          "name": "turnRate",
+          "type": "number"
+        },
+        {
+          "name": "moveBackward",
+          "type": "boolean"
+        }
+      ]
+    },
+    "FollowObjectBehavior": {
+      "scriptId": "7",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "actorName",
+          "type": "string"
+        }
+      ]
+    },
+    "LightTargetSetterBehavior": {
+      "scriptId": "12",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
+    }
+  }
+}

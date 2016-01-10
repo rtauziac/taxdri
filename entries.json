@@ -1,0 +1,88 @@
+[
+  {
+    "id": "1",
+    "name": "Car",
+    "type": null,
+    "children": [
+      {
+        "id": "0",
+        "name": "Sprite",
+        "type": "sprite"
+      },
+      {
+        "id": "2",
+        "name": "CarBehavior",
+        "type": "script"
+      },
+      {
+        "id": "9",
+        "name": "taxicab",
+        "type": "model"
+      },
+      {
+        "id": "13",
+        "name": "Wheel",
+        "type": "model"
+      },
+      {
+        "id": "14",
+        "name": "prefab",
+        "type": null,
+        "children": [
+          {
+            "id": "15",
+            "name": "Car Prefab",
+            "type": "scene"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "name": "City",
+    "type": null,
+    "children": [
+      {
+        "id": "5",
+        "name": "City Tile Set",
+        "type": "tileSet"
+      },
+      {
+        "id": "6",
+        "name": "City Tile Map",
+        "type": "tileMap"
+      },
+      {
+        "id": "10",
+        "name": "Building1",
+        "type": "model"
+      },
+      {
+        "id": "11",
+        "name": "Map",
+        "type": "model"
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "name": "FollowObject",
+    "type": "script"
+  },
+  {
+    "id": "3",
+    "name": "Test",
+    "type": "scene"
+  },
+  {
+    "id": "8",
+    "name": "Pave",
+    "type": "cubicModel"
+  },
+  {
+    "id": "12",
+    "name": "LightTargetSetter",
+    "type": "script"
+  }
+]
