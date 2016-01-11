@@ -71,6 +71,11 @@
     "type": "script"
   },
   {
+    "id": "12",
+    "name": "LightTargetSetter",
+    "type": "script"
+  },
+  {
     "id": "3",
     "name": "Test",
     "type": "scene"
@@ -79,10 +84,5 @@
     "id": "8",
     "name": "Pave",
     "type": "cubicModel"
-  },
-  {
-    "id": "12",
-    "name": "LightTargetSetter",
-    "type": "script"
   }
 ]

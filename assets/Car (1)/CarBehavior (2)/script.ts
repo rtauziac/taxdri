@@ -3,19 +3,31 @@ class CarBehavior extends Sup.Behavior {
     acceleration = 0;
     turnRate = 0;
     moveBackward = false;
+    leftWheel: Sup.Actor;
+    rightWheel: Sup.Actor;
     
-    awake() {}
+    awake() {
+        this.leftWheel = Sup.getActor("wheel fl");
+        this.rightWheel = Sup.getActor("wheel fr");
+    }
 
     update() {
+        const visualTurnRate = 0.8;
         this.actor.cannonBody.body.angularVelocity = new CANNON.Vec3(0, 0, 0);
         if (Sup.Input.isKeyDown("LEFT")) {
             this.turnRate = 0.02 * Math.min(this.speed, 3);
+            this.leftWheel.setLocalEulerAngles(0, visualTurnRate, 0);
+            this.rightWheel.setLocalEulerAngles(0, visualTurnRate, 0);
         }
         else if (Sup.Input.isKeyDown("RIGHT")) {
             this.turnRate = -0.02 * Math.min(this.speed, 3);
+            this.leftWheel.setLocalEulerAngles(0, -visualTurnRate, 0);
+            this.rightWheel.setLocalEulerAngles(0, -visualTurnRate, 0);
         }
         else {
             this.turnRate *= 0.8
+            this.leftWheel.setLocalEulerAngles(0, 0, 0);
+            this.rightWheel.setLocalEulerAngles(0, 0, 0);
         }
         let angle: number = this.actor.cannonBody.body.quaternion.toAxisAngle(new CANNON.Vec3(0, 0, 1))[1];
         let orientation = new CANNON.Quaternion();
@@ -24,6 +36,8 @@ class CarBehavior extends Sup.Behavior {
         if (finalAngle > Math.PI*2) { finalAngle -= Math.PI*2; }
         orientation.setFromEuler(0, 0, finalAngle);
         this.actor.cannonBody.body.quaternion = orientation;
+        
+        //this.rightWheel.setLocalEulerAngles(0, this.turnRate * 20, 0);
         
         if (Sup.Input.wasKeyJustPressed("DOWN")) {
             if (this.speed < 0.01) {

@@ -31,6 +31,31 @@
           "prefab": {
             "sceneAssetId": "15"
           }
+        },
+        {
+          "id": "16",
+          "name": "car camera anchor",
+          "children": [],
+          "components": [],
+          "position": {
+            "x": 0.25,
+            "y": 0,
+            "z": 0
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
         }
       ],
       "components": [
@@ -114,14 +139,14 @@
           ],
           "position": {
             "x": 0,
-            "y": 0,
-            "z": 10
+            "y": -2.596384048461914,
+            "z": 9.723008155822754
           },
           "orientation": {
-            "x": 0,
+            "x": 0.11815757711894803,
             "y": 0,
             "z": 0,
-            "w": 1
+            "w": 0.9929948510702047
           },
           "scale": {
             "x": 1,
@@ -141,7 +166,7 @@
             "propertyValues": {
               "actorName": {
                 "type": "string",
-                "value": "car"
+                "value": "car camera anchor"
               }
             }
           },
@@ -151,7 +176,7 @@
       "position": {
         "x": 0,
         "y": 0,
-        "z": 0.5
+        "z": 0
       },
       "orientation": {
         "x": 0,
@@ -194,8 +219,8 @@
             }
           ],
           "position": {
-            "x": 0,
-            "y": 0,
+            "x": -4.76837158203125e-7,
+            "y": -0.18952864408493042,
             "z": 0.5
           },
           "orientation": {
