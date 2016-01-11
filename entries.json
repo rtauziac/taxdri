@@ -59,8 +59,33 @@
         "type": "model"
       },
       {
+        "id": "16",
+        "name": "Building2",
+        "type": "model"
+      },
+      {
+        "id": "17",
+        "name": "Building3",
+        "type": "model"
+      },
+      {
+        "id": "18",
+        "name": "fountain",
+        "type": "model"
+      },
+      {
+        "id": "19",
+        "name": "grass",
+        "type": "model"
+      },
+      {
         "id": "11",
         "name": "Map",
+        "type": "model"
+      },
+      {
+        "id": "20",
+        "name": "Bus stop",
         "type": "model"
       }
     ]

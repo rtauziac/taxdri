@@ -3,16 +3,16 @@
   "unitRatio": 1,
   "upAxisMatrix": null,
   "attributes": [
+    "position",
     "uv",
-    "normal",
-    "position"
+    "normal"
   ],
   "bones": null,
   "maps": [
     "map",
     "specular"
   ],
-  "filtering": "pixelated",
+  "filtering": "smooth",
   "wrapping": "clampToEdge",
   "animations": [],
   "opacity": null,

@@ -50,7 +50,7 @@ class CarBehavior extends Sup.Behavior {
         
         const maxSpeed = 5;
         const accel = 0.15;
-        const breaks = 0.4
+        const breaks = 0.6;
         if (Sup.Input.isKeyDown("UP")) {
             this.acceleration = this.speed < maxSpeed ? accel : 0;
         }

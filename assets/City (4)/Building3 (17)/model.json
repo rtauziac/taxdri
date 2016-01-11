@@ -1,0 +1,44 @@
+{
+  "formatVersion": 2,
+  "unitRatio": 1,
+  "upAxisMatrix": null,
+  "attributes": [
+    "position",
+    "uv",
+    "normal"
+  ],
+  "bones": null,
+  "maps": [
+    "map"
+  ],
+  "filtering": "smooth",
+  "wrapping": "clampToEdge",
+  "animations": [
+    {
+      "name": "Animation",
+      "duration": 0,
+      "keyFrames": [],
+      "id": "0"
+    },
+    {
+      "name": "Animation (1)",
+      "duration": 0,
+      "keyFrames": [],
+      "id": "1"
+    },
+    {
+      "name": "qsd",
+      "duration": 0,
+      "keyFrames": [],
+      "id": "2"
+    }
+  ],
+  "opacity": null,
+  "mapSlots": {
+    "map": "map",
+    "light": null,
+    "specular": null,
+    "alpha": null,
+    "normal": null
+  }
+}
