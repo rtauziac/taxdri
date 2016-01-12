@@ -12,15 +12,36 @@ class CarBehavior extends Sup.Behavior {
     }
 
     update() {
+        const maxTurnRate = 0.06
         const visualTurnRate = 0.8;
+        
+        if (Sup.Input.wasKeyJustPressed("DOWN")) {
+            if (this.speed < 0.01) {
+                this.moveBackward = true;
+            }
+        }
+        if (Sup.Input.wasKeyJustReleased("DOWN")) {
+            this.moveBackward = false;
+        }
+        
         this.actor.cannonBody.body.angularVelocity = new CANNON.Vec3(0, 0, 0);
         if (Sup.Input.isKeyDown("LEFT")) {
-            this.turnRate = 0.02 * Math.min(this.speed, 3);
+            if (!this.moveBackward) {
+                this.turnRate = Math.min(maxTurnRate * Math.min(this.speed/3, 1), this.turnRate + 0.008);                
+            }
+            else {
+                this.turnRate = Math.max(maxTurnRate * Math.min(this.speed/3, 1), this.turnRate - 0.008);
+            }
             this.leftWheel.setLocalEulerAngles(0, visualTurnRate, 0);
             this.rightWheel.setLocalEulerAngles(0, visualTurnRate, 0);
         }
         else if (Sup.Input.isKeyDown("RIGHT")) {
-            this.turnRate = -0.02 * Math.min(this.speed, 3);
+            if (!this.moveBackward) {
+                this.turnRate = Math.max(-maxTurnRate * Math.min(this.speed/3, 1), this.turnRate - 0.008);
+            }   
+            else {
+                this.turnRate = Math.min(-maxTurnRate * Math.min(this.speed/3, 1), this.turnRate + 0.008);
+            }
             this.leftWheel.setLocalEulerAngles(0, -visualTurnRate, 0);
             this.rightWheel.setLocalEulerAngles(0, -visualTurnRate, 0);
         }
@@ -39,15 +60,6 @@ class CarBehavior extends Sup.Behavior {
         
         //this.rightWheel.setLocalEulerAngles(0, this.turnRate * 20, 0);
         
-        if (Sup.Input.wasKeyJustPressed("DOWN")) {
-            if (this.speed < 0.01) {
-                this.moveBackward = true;
-            }
-        }
-        if (Sup.Input.wasKeyJustReleased("DOWN")) {
-            this.moveBackward = false;
-        }
-        
         const maxSpeed = 5;
         const accel = 0.15;
         const breaks = 0.6;
@@ -56,7 +68,7 @@ class CarBehavior extends Sup.Behavior {
         }
         else if (Sup.Input.isKeyDown("DOWN")) {
             if (this.moveBackward) {
-                this.acceleration = this.speed > -maxSpeed/3 ? -breaks : 0;
+                this.acceleration = this.speed > -maxSpeed/3 ? -accel : 0;
             }
             else {
                 if (this.speed < breaks) {
