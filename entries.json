@@ -87,6 +87,28 @@
         "id": "20",
         "name": "Bus stop",
         "type": "model"
+      },
+      {
+        "id": "24",
+        "name": "CityRuler",
+        "type": "script"
+      }
+    ]
+  },
+  {
+    "id": "23",
+    "name": "Customer",
+    "type": null,
+    "children": [
+      {
+        "id": "21",
+        "name": "Man",
+        "type": "model"
+      },
+      {
+        "id": "22",
+        "name": "Ring",
+        "type": "model"
       }
     ]
   },

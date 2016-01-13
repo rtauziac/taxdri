@@ -39,6 +39,12 @@
       "line": 0,
       "parentBehavior": null,
       "properties": []
+    },
+    "CityRulerBehavior": {
+      "scriptId": "24",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
     }
   }
 }
