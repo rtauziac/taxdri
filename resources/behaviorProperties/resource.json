@@ -40,8 +40,8 @@
       "parentBehavior": null,
       "properties": []
     },
-    "CityRulerBehavior": {
-      "scriptId": "24",
+    "CustomerBehavior": {
+      "scriptId": "26",
       "line": 0,
       "parentBehavior": null,
       "properties": []

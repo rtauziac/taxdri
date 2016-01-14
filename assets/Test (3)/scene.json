@@ -292,7 +292,7 @@
         {
           "type": "CannonBody",
           "config": {
-            "mass": 1,
+            "mass": 10,
             "fixedRotation": false,
             "offset": {
               "x": 0.17,
@@ -394,9 +394,9 @@
                 },
                 "shape": "box",
                 "halfSize": {
-                  "x": 20,
+                  "x": 27,
                   "y": 1,
-                  "z": 20
+                  "z": 27
                 },
                 "radius": 1,
                 "height": 1
@@ -3441,7 +3441,7 @@
           "position": {
             "x": 0,
             "y": 0,
-            "z": 0
+            "z": 0.2
           },
           "orientation": {
             "x": 0.7071067811865475,
@@ -3463,12 +3463,12 @@
         {
           "type": "CannonBody",
           "config": {
-            "mass": 1,
+            "mass": 0.7,
             "fixedRotation": false,
             "offset": {
               "x": 0,
               "y": 0,
-              "z": 0.4
+              "z": 0.6
             },
             "shape": "cylinder",
             "halfSize": {
@@ -3480,11 +3480,19 @@
             "height": 0.8
           },
           "id": "1"
+        },
+        {
+          "type": "Behavior",
+          "config": {
+            "behaviorName": "CustomerBehavior",
+            "propertyValues": {}
+          },
+          "id": "2"
         }
       ],
       "position": {
-        "x": -9,
-        "y": -21,
+        "x": -0.11658421903848648,
+        "y": -2.58754825592041,
         "z": 0.49850723147392273
       },
       "orientation": {

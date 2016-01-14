@@ -87,11 +87,6 @@
         "id": "20",
         "name": "Bus stop",
         "type": "model"
-      },
-      {
-        "id": "24",
-        "name": "CityRuler",
-        "type": "script"
       }
     ]
   },
@@ -109,6 +104,11 @@
         "id": "22",
         "name": "Ring",
         "type": "model"
+      },
+      {
+        "id": "26",
+        "name": "CustomerBehavior",
+        "type": "script"
       }
     ]
   },

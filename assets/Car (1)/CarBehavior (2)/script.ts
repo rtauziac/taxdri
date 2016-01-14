@@ -5,16 +5,16 @@ class CarBehavior extends Sup.Behavior {
     moveBackward = false;
     leftWheel: Sup.Actor;
     rightWheel: Sup.Actor;
-    
+        
     awake() {
         this.leftWheel = Sup.getActor("wheel fl");
         this.rightWheel = Sup.getActor("wheel fr");
     }
-
+    
     update() {
         const maxTurnRate = 0.06
         const visualTurnRate = 0.8;
-        
+                
         if (Sup.Input.wasKeyJustPressed("DOWN")) {
             if (this.speed < 0.01) {
                 this.moveBackward = true;
@@ -23,7 +23,7 @@ class CarBehavior extends Sup.Behavior {
         if (Sup.Input.wasKeyJustReleased("DOWN")) {
             this.moveBackward = false;
         }
-        
+                        
         this.actor.cannonBody.body.angularVelocity = new CANNON.Vec3(0, 0, 0);
         if (Sup.Input.isKeyDown("LEFT")) {
             if (!this.moveBackward) {
@@ -59,7 +59,7 @@ class CarBehavior extends Sup.Behavior {
         this.actor.cannonBody.body.quaternion = orientation;
         
         //this.rightWheel.setLocalEulerAngles(0, this.turnRate * 20, 0);
-        
+                
         const maxSpeed = 5;
         const accel = 0.15;
         const breaks = 0.6;
@@ -91,13 +91,13 @@ class CarBehavior extends Sup.Behavior {
                 this.acceleration = -this.speed;
             }
         }
-        
+                        
         this.speed += this.acceleration;
-        
+                
         //this.actor.moveOrientedY(this.speed);
         let zAngle = this.actor.getEulerZ();
         this.actor.cannonBody.body.velocity = new CANNON.Vec3(this.speed * Math.cos(zAngle), this.speed * Math.sin(zAngle), 0), new CANNON.Vec3(0, 0, 0);
-        
+                
         //debug
         if (Sup.Input.isKeyDown("R")) {
             this.actor.setLocalPosition(new Sup.Math.Vector3(0, 0, 0));
