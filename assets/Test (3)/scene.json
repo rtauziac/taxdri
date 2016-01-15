@@ -235,7 +235,7 @@
           "position": {
             "x": 0,
             "y": 0,
-            "z": 0.06580138206481934
+            "z": 0.066
           },
           "orientation": {
             "x": 0.4999999999999999,
@@ -261,6 +261,99 @@
           "components": [],
           "position": {
             "x": 0.25,
+            "y": 0,
+            "z": 0
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "137",
+          "name": "arrow",
+          "children": [
+            {
+              "id": "138",
+              "name": "arrowDec",
+              "children": [
+                {
+                  "id": "139",
+                  "name": "arrowMove",
+                  "children": [],
+                  "components": [
+                    {
+                      "type": "ModelRenderer",
+                      "config": {
+                        "modelAssetId": "28",
+                        "animationId": "",
+                        "castShadow": false,
+                        "receiveShadow": false,
+                        "color": "f14141",
+                        "overrideOpacity": false,
+                        "opacity": null,
+                        "materialType": "phong",
+                        "shaderAssetId": null
+                      },
+                      "id": "0"
+                    }
+                  ],
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "orientation": {
+                    "x": 0.4999999999999999,
+                    "y": -0.5,
+                    "z": -0.5,
+                    "w": 0.5000000000000001
+                  },
+                  "scale": {
+                    "x": 0.2,
+                    "y": 0.2,
+                    "z": 0.2
+                  },
+                  "visible": true,
+                  "layer": 0,
+                  "prefab": null
+                }
+              ],
+              "components": [],
+              "position": {
+                "x": 1.4235508739948273,
+                "y": 0,
+                "z": 0.7273200154304504
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [],
+          "position": {
+            "x": 0,
             "y": 0,
             "z": 0
           },
@@ -312,8 +405,8 @@
         }
       ],
       "position": {
-        "x": -0.7399668097496033,
-        "y": -1.7653511762619019,
+        "x": -1.4781720638275146,
+        "y": -1.778053879737854,
         "z": 0.6198890805244446
       },
       "orientation": {
@@ -3415,7 +3508,7 @@
     },
     {
       "id": "131",
-      "name": "customer",
+      "name": "customer1",
       "children": [
         {
           "id": "132",
@@ -3457,6 +3550,47 @@
           "visible": true,
           "layer": 0,
           "prefab": null
+        },
+        {
+          "id": "134",
+          "name": "ring",
+          "children": [],
+          "components": [
+            {
+              "type": "ModelRenderer",
+              "config": {
+                "modelAssetId": "22",
+                "animationId": null,
+                "castShadow": false,
+                "receiveShadow": false,
+                "color": "04ff11",
+                "overrideOpacity": false,
+                "opacity": null,
+                "materialType": "basic",
+                "shaderAssetId": null
+              },
+              "id": "0"
+            }
+          ],
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0.25
+          },
+          "orientation": {
+            "x": 0.7071067811865475,
+            "y": 0,
+            "z": 0,
+            "w": 0.7071067811865476
+          },
+          "scale": {
+            "x": 1.5,
+            "y": 1.5,
+            "z": 1.5
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
         }
       ],
       "components": [
@@ -3485,15 +3619,87 @@
           "type": "Behavior",
           "config": {
             "behaviorName": "CustomerBehavior",
-            "propertyValues": {}
+            "propertyValues": {
+              "destinationName": {
+                "type": "string",
+                "value": "customer1 destination"
+              }
+            }
           },
           "id": "2"
         }
       ],
       "position": {
-        "x": -0.11658421903848648,
-        "y": -2.58754825592041,
-        "z": 0.49850723147392273
+        "x": 3.4712111949920654,
+        "y": -4.216251850128174,
+        "z": 0.49900001287460327
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    },
+    {
+      "id": "135",
+      "name": "customer1 destination",
+      "children": [
+        {
+          "id": "136",
+          "name": "ring",
+          "children": [],
+          "components": [
+            {
+              "type": "ModelRenderer",
+              "config": {
+                "modelAssetId": "22",
+                "animationId": null,
+                "castShadow": false,
+                "receiveShadow": false,
+                "color": "ff0404",
+                "overrideOpacity": false,
+                "opacity": null,
+                "materialType": "basic",
+                "shaderAssetId": null
+              },
+              "id": "0"
+            }
+          ],
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0.249
+          },
+          "orientation": {
+            "x": 0.7071067811865475,
+            "y": 0,
+            "z": 0,
+            "w": 0.7071067811865476
+          },
+          "scale": {
+            "x": 1.5,
+            "y": 1.5,
+            "z": 1.5
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        }
+      ],
+      "components": [],
+      "position": {
+        "x": -17.321229934692383,
+        "y": 2.251605987548828,
+        "z": 0.5
       },
       "orientation": {
         "x": 0,

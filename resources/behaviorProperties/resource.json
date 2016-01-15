@@ -4,24 +4,7 @@
       "scriptId": "2",
       "line": 0,
       "parentBehavior": null,
-      "properties": [
-        {
-          "name": "speed",
-          "type": "number"
-        },
-        {
-          "name": "acceleration",
-          "type": "number"
-        },
-        {
-          "name": "turnRate",
-          "type": "number"
-        },
-        {
-          "name": "moveBackward",
-          "type": "boolean"
-        }
-      ]
+      "properties": []
     },
     "FollowObjectBehavior": {
       "scriptId": "7",
@@ -44,7 +27,12 @@
       "scriptId": "26",
       "line": 6,
       "parentBehavior": null,
-      "properties": []
+      "properties": [
+        {
+          "name": "destinationName",
+          "type": "string"
+        }
+      ]
     },
     "WorldRulerBehavior": {
       "scriptId": "27",

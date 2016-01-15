@@ -1,19 +1,23 @@
 class CarBehavior extends Sup.Behavior {
-    speed = 0;
-    acceleration = 0;
-    turnRate = 0;
-    moveBackward = false;
-    leftWheel: Sup.Actor;
-    rightWheel: Sup.Actor;
-        
+    private speed = 0;
+    private acceleration = 0;
+    private turnRate = 0;
+    private moveBackward = false;
+    private leftWheel: Sup.Actor;
+    private rightWheel: Sup.Actor;
+    private customer: CustomerBehavior = null;
+    private arrow: Sup.Actor;
+
     awake() {
         this.leftWheel = Sup.getActor("wheel fl");
         this.rightWheel = Sup.getActor("wheel fr");
         this.actor.cannonBody.body.material.friction = 0;
+        this.arrow = this.actor.getChild("arrow");
+        this.arrow.setVisible(false);
     }
     
     update() {
-        const maxTurnRate = 0.06
+        const maxTurnRate = 0.06;
         const visualTurnRate = 0.8;
                 
         if (Sup.Input.wasKeyJustPressed("DOWN")) {
@@ -95,16 +99,28 @@ class CarBehavior extends Sup.Behavior {
                         
         this.speed += this.acceleration;
                 
-        //this.actor.moveOrientedY(this.speed);
         let zAngle = this.actor.getEulerZ();
         this.actor.cannonBody.body.velocity = new CANNON.Vec3(this.speed * Math.cos(zAngle), this.speed * Math.sin(zAngle), 0), new CANNON.Vec3(0, 0, 0);
-                
-        //debug
-        if (Sup.Input.isKeyDown("R")) {
-            this.actor.setLocalPosition(new Sup.Math.Vector3(0, 0, 0));
-            this.speed = 0;
-            this.acceleration = 0;
+        
+        if (this.customer != null) {
+            
         }
+    }
+
+    public takeCustomer(customer: CustomerBehavior) {
+        if (this.isStopped() && this.customer == null) {
+                this.customer = customer
+                return true;
+        }
+        return false;
+    }
+
+    public customerGetOut() {
+        this.customer = null;
+    }
+
+    public isStopped() {
+        return this.speed < 0.01;
     }
 }
 Sup.registerBehavior(CarBehavior);

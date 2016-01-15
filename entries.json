@@ -35,6 +35,11 @@
             "type": "scene"
           }
         ]
+      },
+      {
+        "id": "28",
+        "name": "Arrow",
+        "type": "model"
       }
     ]
   },
