@@ -9,6 +9,7 @@ class CarBehavior extends Sup.Behavior {
     awake() {
         this.leftWheel = Sup.getActor("wheel fl");
         this.rightWheel = Sup.getActor("wheel fr");
+        this.actor.cannonBody.body.material.friction = 0;
     }
     
     update() {

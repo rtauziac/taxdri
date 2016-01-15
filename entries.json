@@ -87,6 +87,11 @@
         "id": "20",
         "name": "Bus stop",
         "type": "model"
+      },
+      {
+        "id": "27",
+        "name": "WorldRuler",
+        "type": "script"
       }
     ]
   },
