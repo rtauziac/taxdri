@@ -5042,7 +5042,7 @@
                     "color": "529746",
                     "overrideOpacity": false,
                     "opacity": null,
-                    "materialType": "basic",
+                    "materialType": "phong",
                     "shaderAssetId": null
                   },
                   "id": "0"
@@ -5089,7 +5089,7 @@
                       "y": 0.5,
                       "z": 0.5
                     },
-                    "radius": 2,
+                    "radius": 2.05,
                     "height": 2
                   },
                   "id": "0"
@@ -5183,7 +5183,7 @@
                       "y": 0.5,
                       "z": 0.5
                     },
-                    "radius": 2,
+                    "radius": 2.05,
                     "height": 2
                   },
                   "id": "0"

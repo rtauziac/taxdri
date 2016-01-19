@@ -7,6 +7,7 @@ class CarBehavior extends Sup.Behavior {
     private rightWheel: Sup.Actor;
     private customer: CustomerBehavior = null;
     private arrow: Sup.Actor;
+    private engineSound: Sup.Audio.SoundPlayer;
 
     awake() {
         this.leftWheel = Sup.getActor("wheel fl");
@@ -14,6 +15,8 @@ class CarBehavior extends Sup.Behavior {
         this.actor.cannonBody.body.material.friction = 0;
         this.arrow = this.actor.getChild("arrow");
         this.arrow.setVisible(false);
+        this.engineSound = new Sup.Audio.SoundPlayer("Engine", 1, {loop: true});
+        this.engineSound.play();
     }
     
     update() {
@@ -98,6 +101,8 @@ class CarBehavior extends Sup.Behavior {
         }
                         
         this.speed += this.acceleration;
+        
+        this.engineSound.setPitch(-0.6 + Math.abs(this.speed) / 5);
                 
         let zAngle = this.actor.getEulerZ();
         this.actor.cannonBody.body.velocity = new CANNON.Vec3(this.speed * Math.cos(zAngle), this.speed * Math.sin(zAngle), 0), new CANNON.Vec3(0, 0, 0);
