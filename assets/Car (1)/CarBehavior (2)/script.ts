@@ -65,9 +65,9 @@ class CarBehavior extends Sup.Behavior {
         
         //this.rightWheel.setLocalEulerAngles(0, this.turnRate * 20, 0);
                 
-        const maxSpeed = 5;
-        const accel = 0.15;
-        const breaks = 0.6;
+        const maxSpeed = 6;
+        const accel = 0.13;
+        const breaks = 0.8;
         if (Sup.Input.isKeyDown("UP")) {
             this.acceleration = this.speed < maxSpeed ? accel : 0;
         }
@@ -102,8 +102,12 @@ class CarBehavior extends Sup.Behavior {
         let zAngle = this.actor.getEulerZ();
         this.actor.cannonBody.body.velocity = new CANNON.Vec3(this.speed * Math.cos(zAngle), this.speed * Math.sin(zAngle), 0), new CANNON.Vec3(0, 0, 0);
         
-        if (this.customer != null) {
-            
+        if (this.customer != null && this.actor.getPosition().distanceTo(this.customer.destinationPosition()) > 3) {
+            this.arrow.setVisible(true);
+            this.arrow.lookAt(this.customer.destinationPosition(), Sup.Math.Vector3.back());
+        }
+        else {
+            this.arrow.setVisible(false);
         }
     }
 
@@ -120,7 +124,7 @@ class CarBehavior extends Sup.Behavior {
     }
 
     public isStopped() {
-        return this.speed < 0.01;
+        return Math.abs(this.speed) < 0.01;
     }
 }
 Sup.registerBehavior(CarBehavior);

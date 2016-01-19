@@ -97,6 +97,11 @@
         "id": "27",
         "name": "WorldRuler",
         "type": "script"
+      },
+      {
+        "id": "29",
+        "name": "Stade",
+        "type": "model"
       }
     ]
   },
