@@ -102,7 +102,8 @@ class CarBehavior extends Sup.Behavior {
                         
         this.speed += this.acceleration;
         
-        this.engineSound.setPitch(-0.6 + Math.abs(this.speed) / 5);
+        this.engineSound.setPitch(-0.6 + Math.abs(this.speed) / 7);
+        this.engineSound.setVolume(0.3 + Math.abs(this.speed) / 10);
                 
         let zAngle = this.actor.getEulerZ();
         this.actor.cannonBody.body.velocity = new CANNON.Vec3(this.speed * Math.cos(zAngle), this.speed * Math.sin(zAngle), 0), new CANNON.Vec3(0, 0, 0);

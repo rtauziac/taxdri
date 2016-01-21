@@ -4,6 +4,8 @@ module WorldConfig {
 }
 
 class WorldRulerBehavior extends Sup.Behavior {
+    night = true
+    
     awake() {
         /*WorldConfig.carBodyMaterial = new CANNON.Material("car material");
         WorldConfig.carBodyMaterial.friction = 0;
@@ -16,7 +18,11 @@ class WorldRulerBehavior extends Sup.Behavior {
         
         let carContactMat = new CANNON.ContactMaterial(WorldConfig.carBodyMaterial, WorldConfig.defaultBodyMaterial, {friction: 0});
         carActor.cannonBody.body.world.addContactMaterial(carContactMat);*/
-        Sup.getActor("car").cannonBody.body.material.friction = 0;
+        // Sup.Audio.playSound("Theme").setLoop(true);
+        
+        if (this.night) {
+            //Sup.getActor("sun light").setVisible(false);
+        }
     }
 
     //update() {

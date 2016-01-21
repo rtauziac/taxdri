@@ -14,7 +14,7 @@
               "type": "Camera",
               "config": {
                 "mode": "perspective",
-                "fov": 45,
+                "fov": 60,
                 "orthographicScale": 10,
                 "viewport": {
                   "x": 0,
@@ -32,7 +32,7 @@
           "position": {
             "x": 0,
             "y": 0,
-            "z": 10
+            "z": 8
           },
           "orientation": {
             "x": 0,
@@ -91,7 +91,7 @@
       "children": [
         {
           "id": "10",
-          "name": "ambiant light",
+          "name": "sun light",
           "children": [],
           "components": [
             {
@@ -99,7 +99,7 @@
               "config": {
                 "type": "directional",
                 "color": "ffffff",
-                "intensity": 1.3,
+                "intensity": 1.5,
                 "distance": 0,
                 "angle": 60,
                 "target": {
@@ -130,7 +130,12 @@
               "type": "Behavior",
               "config": {
                 "behaviorName": "LightTargetSetterBehavior",
-                "propertyValues": {}
+                "propertyValues": {
+                  "objectName": {
+                    "type": "string",
+                    "value": "car"
+                  }
+                }
               },
               "id": "2"
             }
@@ -302,7 +307,7 @@
                         "color": "f14141",
                         "overrideOpacity": false,
                         "opacity": null,
-                        "materialType": "phong",
+                        "materialType": "basic",
                         "shaderAssetId": null
                       },
                       "id": "0"
@@ -1512,6 +1517,95 @@
             "y": 0,
             "z": -0.7071067811865475,
             "w": 0.7071067811865476
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "258",
+          "name": "building3",
+          "children": [
+            {
+              "id": "259",
+              "name": "model",
+              "children": [],
+              "components": [
+                {
+                  "type": "ModelRenderer",
+                  "config": {
+                    "modelAssetId": "17",
+                    "animationId": null,
+                    "castShadow": true,
+                    "receiveShadow": true,
+                    "color": "5261e2",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "phong",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0.4999999999999999,
+                "y": 0.5,
+                "z": 0.5,
+                "w": 0.5000000000000001
+              },
+              "scale": {
+                "x": 1.2,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "CannonBody",
+              "config": {
+                "mass": 0,
+                "fixedRotation": false,
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 1
+                },
+                "shape": "box",
+                "halfSize": {
+                  "x": 1,
+                  "y": 1.2,
+                  "z": 1
+                },
+                "radius": 1,
+                "height": 1
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": 5.457799315452576,
+            "y": 10.003803789615631,
+            "z": 0.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 1,
+            "w": 6.123233995736766e-17
           },
           "scale": {
             "x": 1,
@@ -3421,8 +3515,8 @@
                 }
               ],
               "position": {
-                "x": 1.0274181365966832,
-                "y": 3.552713678800501e-15,
+                "x": 0,
+                "y": 0,
                 "z": 0
               },
               "orientation": {
@@ -3466,7 +3560,7 @@
           ],
           "position": {
             "x": 20.645766615867615,
-            "y": 20.083647310733795,
+            "y": 21.11360412836075,
             "z": 0.5
           },
           "orientation": {
@@ -4401,6 +4495,95 @@
           "prefab": null
         },
         {
+          "id": "266",
+          "name": "building2",
+          "children": [
+            {
+              "id": "267",
+              "name": "model",
+              "children": [],
+              "components": [
+                {
+                  "type": "ModelRenderer",
+                  "config": {
+                    "modelAssetId": "16",
+                    "animationId": null,
+                    "castShadow": true,
+                    "receiveShadow": true,
+                    "color": "44f964",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "phong",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0.4999999999999999,
+                "y": 0.5,
+                "z": 0.5,
+                "w": 0.5000000000000001
+              },
+              "scale": {
+                "x": 0.9,
+                "y": 1.1,
+                "z": 0.9
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "CannonBody",
+              "config": {
+                "mass": 0,
+                "fixedRotation": false,
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 1
+                },
+                "shape": "box",
+                "halfSize": {
+                  "x": 0.64,
+                  "y": 0.9,
+                  "z": 1
+                },
+                "radius": 1,
+                "height": 1
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": 11.069857001304626,
+            "y": 10.333949625492096,
+            "z": 0.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": -0.7071067811865475,
+            "w": 0.7071067811865476
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
           "id": "173",
           "name": "fountain",
           "children": [
@@ -5005,7 +5188,7 @@
           ],
           "position": {
             "x": -15.453184723854065,
-            "y": -4.757444322109222,
+            "y": -4.863290727138519,
             "z": 0.5
           },
           "orientation": {
@@ -6274,7 +6457,7 @@
               },
               "scale": {
                 "x": 0.9,
-                "y": 0.9,
+                "y": 1.2,
                 "z": 0.7
               },
               "visible": true,
@@ -6306,7 +6489,7 @@
             }
           ],
           "position": {
-            "x": -14.936322808265686,
+            "x": -15.082359910011292,
             "y": 10.390786707401276,
             "z": 0.5
           },
@@ -6363,7 +6546,7 @@
               },
               "scale": {
                 "x": 0.9,
-                "y": 0.9,
+                "y": 1.15,
                 "z": 0.7
               },
               "visible": true,
@@ -6395,7 +6578,7 @@
             }
           ],
           "position": {
-            "x": -12.999915719032288,
+            "x": -13.121389031410217,
             "y": 10.390786707401276,
             "z": 0.5
           },
@@ -6452,7 +6635,7 @@
               },
               "scale": {
                 "x": 0.9,
-                "y": 0.9,
+                "y": 1.1,
                 "z": 0.7
               },
               "visible": true,
@@ -6484,7 +6667,7 @@
             }
           ],
           "position": {
-            "x": -11.054192185401917,
+            "x": -11.124321579933167,
             "y": 10.390786707401276,
             "z": 0.5
           },
@@ -6541,7 +6724,7 @@
               },
               "scale": {
                 "x": 0.9,
-                "y": 0.9,
+                "y": 1.05,
                 "z": 0.7
               },
               "visible": true,
@@ -6573,7 +6756,7 @@
             }
           ],
           "position": {
-            "x": -9.16506826877594,
+            "x": -9.146227478981018,
             "y": 10.390786707401276,
             "z": 0.5
           },
@@ -6630,7 +6813,7 @@
               },
               "scale": {
                 "x": 0.9,
-                "y": 0.9,
+                "y": 1,
                 "z": 0.7
               },
               "visible": true,
@@ -6662,7 +6845,7 @@
             }
           ],
           "position": {
-            "x": -7.243520379066467,
+            "x": -7.145427346229553,
             "y": 10.390786707401276,
             "z": 0.5
           },
@@ -6687,6 +6870,451 @@
           "children": [
             {
               "id": "241",
+              "name": "model",
+              "children": [],
+              "components": [
+                {
+                  "type": "ModelRenderer",
+                  "config": {
+                    "modelAssetId": "10",
+                    "animationId": null,
+                    "castShadow": true,
+                    "receiveShadow": true,
+                    "color": "f7f7f7",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "phong",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0.4999999999999999,
+                "y": 0.5,
+                "z": 0.5,
+                "w": 0.5000000000000001
+              },
+              "scale": {
+                "x": 0.9,
+                "y": 0.95,
+                "z": 0.7
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "CannonBody",
+              "config": {
+                "mass": 0,
+                "fixedRotation": false,
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 1
+                },
+                "shape": "box",
+                "halfSize": {
+                  "x": 0.7,
+                  "y": 0.9,
+                  "z": 1
+                },
+                "radius": 1,
+                "height": 1
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": -5.133732438087463,
+            "y": 10.390786707401276,
+            "z": 0.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": -0.7071067811865475,
+            "w": 0.7071067811865476
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "242",
+          "name": "building2",
+          "children": [
+            {
+              "id": "243",
+              "name": "model",
+              "children": [],
+              "components": [
+                {
+                  "type": "ModelRenderer",
+                  "config": {
+                    "modelAssetId": "16",
+                    "animationId": null,
+                    "castShadow": true,
+                    "receiveShadow": true,
+                    "color": "816cd0",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "phong",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0.4999999999999999,
+                "y": 0.5,
+                "z": 0.5,
+                "w": 0.5000000000000001
+              },
+              "scale": {
+                "x": 0.9,
+                "y": 2,
+                "z": 0.9
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "CannonBody",
+              "config": {
+                "mass": 0,
+                "fixedRotation": false,
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 1
+                },
+                "shape": "box",
+                "halfSize": {
+                  "x": 0.64,
+                  "y": 0.9,
+                  "z": 1
+                },
+                "radius": 1,
+                "height": 1
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": -15.453184723854065,
+            "y": -6.836518228054047,
+            "z": 0.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 1,
+            "w": 6.123233995736766e-17
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "244",
+          "name": "building3",
+          "children": [
+            {
+              "id": "245",
+              "name": "model",
+              "children": [],
+              "components": [
+                {
+                  "type": "ModelRenderer",
+                  "config": {
+                    "modelAssetId": "17",
+                    "animationId": null,
+                    "castShadow": true,
+                    "receiveShadow": true,
+                    "color": "abd361",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "phong",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0.4999999999999999,
+                "y": 0.5,
+                "z": 0.5,
+                "w": 0.5000000000000001
+              },
+              "scale": {
+                "x": 0.7,
+                "y": 1.1,
+                "z": 0.9
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "CannonBody",
+              "config": {
+                "mass": 0,
+                "fixedRotation": false,
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 1
+                },
+                "shape": "box",
+                "halfSize": {
+                  "x": 0.9,
+                  "y": 0.7,
+                  "z": 1
+                },
+                "radius": 1,
+                "height": 1
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": -15.438799858093262,
+            "y": -15.225430488586426,
+            "z": 0.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": -0.7071067811865475,
+            "w": 0.7071067811865476
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "246",
+          "name": "building1",
+          "children": [
+            {
+              "id": "247",
+              "name": "model",
+              "children": [],
+              "components": [
+                {
+                  "type": "ModelRenderer",
+                  "config": {
+                    "modelAssetId": "10",
+                    "animationId": null,
+                    "castShadow": true,
+                    "receiveShadow": true,
+                    "color": "4f4f4f",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "phong",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0.4999999999999999,
+                "y": 0.5,
+                "z": 0.5,
+                "w": 0.5000000000000001
+              },
+              "scale": {
+                "x": 0.7,
+                "y": 0.7,
+                "z": 0.7
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "CannonBody",
+              "config": {
+                "mass": 0,
+                "fixedRotation": false,
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 1
+                },
+                "shape": "box",
+                "halfSize": {
+                  "x": 0.7,
+                  "y": 0.7,
+                  "z": 1
+                },
+                "radius": 1,
+                "height": 1
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": -15.426674485206604,
+            "y": -8.59414142370224,
+            "z": 0.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "249",
+          "name": "building2",
+          "children": [
+            {
+              "id": "250",
+              "name": "model",
+              "children": [],
+              "components": [
+                {
+                  "type": "ModelRenderer",
+                  "config": {
+                    "modelAssetId": "16",
+                    "animationId": null,
+                    "castShadow": true,
+                    "receiveShadow": true,
+                    "color": "ffffff",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "phong",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0.4999999999999999,
+                "y": 0.5,
+                "z": 0.5,
+                "w": 0.5000000000000001
+              },
+              "scale": {
+                "x": 0.9,
+                "y": 1.2,
+                "z": 0.9
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "CannonBody",
+              "config": {
+                "mass": 0,
+                "fixedRotation": false,
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 1
+                },
+                "shape": "box",
+                "halfSize": {
+                  "x": 0.64,
+                  "y": 0.9,
+                  "z": 1
+                },
+                "radius": 1,
+                "height": 1
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": -15.453184723854065,
+            "y": -10.362177312374115,
+            "z": 0.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "252",
+          "name": "building1",
+          "children": [
+            {
+              "id": "253",
               "name": "model",
               "children": [],
               "components": [
@@ -6751,7 +7379,7 @@
             }
           ],
           "position": {
-            "x": -5.335550904273987,
+            "x": -3.16331684589386,
             "y": 10.390786707401276,
             "z": 0.5
           },
@@ -6769,9 +7397,2154 @@
           "visible": true,
           "layer": 0,
           "prefab": null
+        },
+        {
+          "id": "254",
+          "name": "building1",
+          "children": [
+            {
+              "id": "255",
+              "name": "model",
+              "children": [],
+              "components": [
+                {
+                  "type": "ModelRenderer",
+                  "config": {
+                    "modelAssetId": "10",
+                    "animationId": null,
+                    "castShadow": true,
+                    "receiveShadow": true,
+                    "color": "f7f7f7",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "phong",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0.4999999999999999,
+                "y": 0.5,
+                "z": 0.5,
+                "w": 0.5000000000000001
+              },
+              "scale": {
+                "x": 0.9,
+                "y": 0.85,
+                "z": 0.7
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "CannonBody",
+              "config": {
+                "mass": 0,
+                "fixedRotation": false,
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 1
+                },
+                "shape": "box",
+                "halfSize": {
+                  "x": 0.7,
+                  "y": 0.9,
+                  "z": 1
+                },
+                "radius": 1,
+                "height": 1
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": -1.1738966703414917,
+            "y": 10.390786707401276,
+            "z": 0.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": -0.7071067811865475,
+            "w": 0.7071067811865476
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "256",
+          "name": "building1",
+          "children": [
+            {
+              "id": "257",
+              "name": "model",
+              "children": [],
+              "components": [
+                {
+                  "type": "ModelRenderer",
+                  "config": {
+                    "modelAssetId": "10",
+                    "animationId": null,
+                    "castShadow": true,
+                    "receiveShadow": true,
+                    "color": "f7f7f7",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "phong",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0.4999999999999999,
+                "y": 0.5,
+                "z": 0.5,
+                "w": 0.5000000000000001
+              },
+              "scale": {
+                "x": 0.9,
+                "y": 0.8,
+                "z": 0.7
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "CannonBody",
+              "config": {
+                "mass": 0,
+                "fixedRotation": false,
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 1
+                },
+                "shape": "box",
+                "halfSize": {
+                  "x": 0.7,
+                  "y": 0.9,
+                  "z": 1
+                },
+                "radius": 1,
+                "height": 1
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": 0.8257312476634979,
+            "y": 10.390786707401276,
+            "z": 0.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": -0.7071067811865475,
+            "w": 0.7071067811865476
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "260",
+          "name": "building1",
+          "children": [
+            {
+              "id": "261",
+              "name": "model",
+              "children": [],
+              "components": [
+                {
+                  "type": "ModelRenderer",
+                  "config": {
+                    "modelAssetId": "10",
+                    "animationId": null,
+                    "castShadow": true,
+                    "receiveShadow": true,
+                    "color": "f7f7f7",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "phong",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": 0.05062413215637429,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0.4999999999999999,
+                "y": 0.5,
+                "z": 0.5,
+                "w": 0.5000000000000001
+              },
+              "scale": {
+                "x": 0.9,
+                "y": 0.75,
+                "z": 0.7
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "CannonBody",
+              "config": {
+                "mass": 0,
+                "fixedRotation": false,
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 1
+                },
+                "shape": "box",
+                "halfSize": {
+                  "x": 0.7,
+                  "y": 0.9,
+                  "z": 1
+                },
+                "radius": 1,
+                "height": 1
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": 2.7763991355895996,
+            "y": 10.390786707401276,
+            "z": 0.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": -0.7071067811865475,
+            "w": 0.7071067811865476
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "262",
+          "name": "building1",
+          "children": [
+            {
+              "id": "263",
+              "name": "model",
+              "children": [],
+              "components": [
+                {
+                  "type": "ModelRenderer",
+                  "config": {
+                    "modelAssetId": "10",
+                    "animationId": null,
+                    "castShadow": true,
+                    "receiveShadow": true,
+                    "color": "b1e4c7",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "phong",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0.4999999999999999,
+                "y": 0.5,
+                "z": 0.5,
+                "w": 0.5000000000000001
+              },
+              "scale": {
+                "x": 1,
+                "y": 1.5,
+                "z": 1.4
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "CannonBody",
+              "config": {
+                "mass": 0,
+                "fixedRotation": false,
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 1
+                },
+                "shape": "box",
+                "halfSize": {
+                  "x": 1.4,
+                  "y": 1,
+                  "z": 1
+                },
+                "radius": 1,
+                "height": 1
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": 7.428003191947937,
+            "y": 10.023871004581451,
+            "z": 0.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0.7071067811865476,
+            "w": 0.7071067811865475
+          },
+          "scale": {
+            "x": 0.8,
+            "y": 0.8,
+            "z": 0.8
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "264",
+          "name": "building1",
+          "children": [
+            {
+              "id": "265",
+              "name": "model",
+              "children": [],
+              "components": [
+                {
+                  "type": "ModelRenderer",
+                  "config": {
+                    "modelAssetId": "10",
+                    "animationId": null,
+                    "castShadow": true,
+                    "receiveShadow": true,
+                    "color": "775a57",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "phong",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0.4999999999999999,
+                "y": 0.5,
+                "z": 0.5,
+                "w": 0.5000000000000001
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "CannonBody",
+              "config": {
+                "mass": 0,
+                "fixedRotation": false,
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 1
+                },
+                "shape": "box",
+                "halfSize": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "radius": 1,
+                "height": 1
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": 9.222939848899841,
+            "y": 10.330838739871979,
+            "z": 0.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0.7071067811865476,
+            "w": 0.7071067811865475
+          },
+          "scale": {
+            "x": 0.8,
+            "y": 0.8,
+            "z": 0.8
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "268",
+          "name": "building2",
+          "children": [
+            {
+              "id": "269",
+              "name": "model",
+              "children": [],
+              "components": [
+                {
+                  "type": "ModelRenderer",
+                  "config": {
+                    "modelAssetId": "16",
+                    "animationId": null,
+                    "castShadow": true,
+                    "receiveShadow": true,
+                    "color": "edf547",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "phong",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 3.552713678800501e-15,
+                "y": -0.421719551086424,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0.4999999999999999,
+                "y": 0.5,
+                "z": 0.5,
+                "w": 0.5000000000000001
+              },
+              "scale": {
+                "x": 1.3,
+                "y": 1.1,
+                "z": 0.9
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "CannonBody",
+              "config": {
+                "mass": 0,
+                "fixedRotation": false,
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 1
+                },
+                "shape": "box",
+                "halfSize": {
+                  "x": 0.64,
+                  "y": 1.3,
+                  "z": 1
+                },
+                "radius": 1,
+                "height": 1
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": 13.80242669582367,
+            "y": 10.333949625492096,
+            "z": 0.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": -0.7071067811865475,
+            "w": 0.7071067811865476
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "271",
+          "name": "building1",
+          "children": [
+            {
+              "id": "272",
+              "name": "model",
+              "children": [],
+              "components": [
+                {
+                  "type": "ModelRenderer",
+                  "config": {
+                    "modelAssetId": "10",
+                    "animationId": null,
+                    "castShadow": true,
+                    "receiveShadow": true,
+                    "color": "ceb76f",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "phong",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0.4999999999999999,
+                "y": 0.5,
+                "z": 0.5,
+                "w": 0.5000000000000001
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "CannonBody",
+              "config": {
+                "mass": 0,
+                "fixedRotation": false,
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 1
+                },
+                "shape": "box",
+                "halfSize": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "radius": 1,
+                "height": 1
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": 15.583207488059998,
+            "y": 10.330838739871979,
+            "z": 0.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": -0.7071067811865475,
+            "w": 0.7071067811865476
+          },
+          "scale": {
+            "x": 0.8,
+            "y": 0.8,
+            "z": 0.8
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "273",
+          "name": "building1",
+          "children": [
+            {
+              "id": "274",
+              "name": "model",
+              "children": [],
+              "components": [
+                {
+                  "type": "ModelRenderer",
+                  "config": {
+                    "modelAssetId": "10",
+                    "animationId": null,
+                    "castShadow": true,
+                    "receiveShadow": true,
+                    "color": "3ebbff",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "phong",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0.4999999999999999,
+                "y": 0.5,
+                "z": 0.5,
+                "w": 0.5000000000000001
+              },
+              "scale": {
+                "x": 1,
+                "y": 0.8,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "CannonBody",
+              "config": {
+                "mass": 0,
+                "fixedRotation": false,
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 1
+                },
+                "shape": "box",
+                "halfSize": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "radius": 1,
+                "height": 1
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": 17.283254027366638,
+            "y": 10.330838739871979,
+            "z": 0.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": -0.7071067811865475,
+            "w": 0.7071067811865476
+          },
+          "scale": {
+            "x": 0.8,
+            "y": 0.8,
+            "z": 0.8
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "275",
+          "name": "bus stop",
+          "children": [
+            {
+              "id": "276",
+              "name": "model",
+              "children": [],
+              "components": [
+                {
+                  "type": "ModelRenderer",
+                  "config": {
+                    "modelAssetId": "20",
+                    "animationId": null,
+                    "castShadow": true,
+                    "receiveShadow": true,
+                    "color": "c6f8fd",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "phong",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0.017852783203121447,
+                "y": -5.329070518200751e-15,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0.4999999999999999,
+                "y": 0.5,
+                "z": 0.5,
+                "w": 0.5000000000000001
+              },
+              "scale": {
+                "x": 0.6,
+                "y": 0.6,
+                "z": 0.6
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "CannonBody",
+              "config": {
+                "mass": 0,
+                "fixedRotation": false,
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 1
+                },
+                "shape": "box",
+                "halfSize": {
+                  "x": 0.3,
+                  "y": 0.6,
+                  "z": 1
+                },
+                "radius": 1,
+                "height": 1
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": -14.842228531837463,
+            "y": -12.236043393611908,
+            "z": 0.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "277",
+          "name": "fountain",
+          "children": [
+            {
+              "id": "278",
+              "name": "model",
+              "children": [],
+              "components": [
+                {
+                  "type": "ModelRenderer",
+                  "config": {
+                    "modelAssetId": "18",
+                    "animationId": null,
+                    "castShadow": true,
+                    "receiveShadow": true,
+                    "color": "72aacb",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "phong",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0.4999999999999999,
+                "y": 0.5,
+                "z": 0.5,
+                "w": 0.5000000000000001
+              },
+              "scale": {
+                "x": 0.5,
+                "y": 0.5,
+                "z": 0.5
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "CannonBody",
+              "config": {
+                "mass": 0,
+                "fixedRotation": false,
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0.5
+                },
+                "shape": "cylinder",
+                "halfSize": {
+                  "x": 0.64,
+                  "y": 0.9,
+                  "z": 1
+                },
+                "radius": 0.5,
+                "height": 1
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": -15.859869599342346,
+            "y": -12.276528775691986,
+            "z": 0.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": -0.7071067811865475,
+            "w": 0.7071067811865476
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "279",
+          "name": "building2",
+          "children": [
+            {
+              "id": "280",
+              "name": "model",
+              "children": [],
+              "components": [
+                {
+                  "type": "ModelRenderer",
+                  "config": {
+                    "modelAssetId": "16",
+                    "animationId": null,
+                    "castShadow": true,
+                    "receiveShadow": true,
+                    "color": "61dcb7",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "phong",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0.4999999999999999,
+                "y": 0.5,
+                "z": 0.5,
+                "w": 0.5000000000000001
+              },
+              "scale": {
+                "x": 0.9,
+                "y": 1.1,
+                "z": 0.9
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "CannonBody",
+              "config": {
+                "mass": 0,
+                "fixedRotation": false,
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 1
+                },
+                "shape": "box",
+                "halfSize": {
+                  "x": 0.64,
+                  "y": 0.9,
+                  "z": 1
+                },
+                "radius": 1,
+                "height": 1
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": 19.073996901512146,
+            "y": 10.333949625492096,
+            "z": 0.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": -0.7071067811865475,
+            "w": 0.7071067811865476
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "281",
+          "name": "building1",
+          "children": [
+            {
+              "id": "282",
+              "name": "model",
+              "children": [],
+              "components": [
+                {
+                  "type": "ModelRenderer",
+                  "config": {
+                    "modelAssetId": "10",
+                    "animationId": null,
+                    "castShadow": true,
+                    "receiveShadow": true,
+                    "color": "bb5fde",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "phong",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0.4999999999999999,
+                "y": 0.5,
+                "z": 0.5,
+                "w": 0.5000000000000001
+              },
+              "scale": {
+                "x": 1,
+                "y": 0.8,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "CannonBody",
+              "config": {
+                "mass": 0,
+                "fixedRotation": false,
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 1
+                },
+                "shape": "box",
+                "halfSize": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "radius": 1,
+                "height": 1
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": 20.84600579738617,
+            "y": 10.330838739871979,
+            "z": 0.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0.7071067811865475,
+            "w": 0.7071067811865476
+          },
+          "scale": {
+            "x": 0.8,
+            "y": 0.8,
+            "z": 0.8
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "283",
+          "name": "building1",
+          "children": [
+            {
+              "id": "284",
+              "name": "model",
+              "children": [],
+              "components": [
+                {
+                  "type": "ModelRenderer",
+                  "config": {
+                    "modelAssetId": "10",
+                    "animationId": null,
+                    "castShadow": true,
+                    "receiveShadow": true,
+                    "color": "ffffff",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "phong",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0.4999999999999999,
+                "y": 0.5,
+                "z": 0.5,
+                "w": 0.5000000000000001
+              },
+              "scale": {
+                "x": 1,
+                "y": 0.5,
+                "z": 0.6
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "CannonBody",
+              "config": {
+                "mass": 0,
+                "fixedRotation": false,
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 1
+                },
+                "shape": "box",
+                "halfSize": {
+                  "x": 0.6,
+                  "y": 1,
+                  "z": 1
+                },
+                "radius": 1,
+                "height": 1
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": 16.735,
+            "y": 4,
+            "z": 0.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": -0.7071067811865475,
+            "w": 0.7071067811865476
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "285",
+          "name": "building1",
+          "children": [
+            {
+              "id": "286",
+              "name": "model",
+              "children": [],
+              "components": [
+                {
+                  "type": "ModelRenderer",
+                  "config": {
+                    "modelAssetId": "10",
+                    "animationId": null,
+                    "castShadow": true,
+                    "receiveShadow": true,
+                    "color": "ffffff",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "phong",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0.4999999999999999,
+                "y": 0.5,
+                "z": 0.5,
+                "w": 0.5000000000000001
+              },
+              "scale": {
+                "x": 1,
+                "y": 0.5,
+                "z": 0.6
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "CannonBody",
+              "config": {
+                "mass": 0,
+                "fixedRotation": false,
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 1
+                },
+                "shape": "box",
+                "halfSize": {
+                  "x": 0.6,
+                  "y": 1,
+                  "z": 1
+                },
+                "radius": 1,
+                "height": 1
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": 14.74,
+            "y": 4,
+            "z": 0.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": -0.7071067811865475,
+            "w": 0.7071067811865476
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "287",
+          "name": "building1",
+          "children": [
+            {
+              "id": "288",
+              "name": "model",
+              "children": [],
+              "components": [
+                {
+                  "type": "ModelRenderer",
+                  "config": {
+                    "modelAssetId": "10",
+                    "animationId": null,
+                    "castShadow": true,
+                    "receiveShadow": true,
+                    "color": "ffffff",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "phong",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0.4999999999999999,
+                "y": 0.5,
+                "z": 0.5,
+                "w": 0.5000000000000001
+              },
+              "scale": {
+                "x": 1,
+                "y": 0.5,
+                "z": 0.6
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "CannonBody",
+              "config": {
+                "mass": 0,
+                "fixedRotation": false,
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 1
+                },
+                "shape": "box",
+                "halfSize": {
+                  "x": 0.6,
+                  "y": 1,
+                  "z": 1
+                },
+                "radius": 1,
+                "height": 1
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": 18.731,
+            "y": 4,
+            "z": 0.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": -0.7071067811865475,
+            "w": 0.7071067811865476
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "289",
+          "name": "building1",
+          "children": [
+            {
+              "id": "290",
+              "name": "model",
+              "children": [],
+              "components": [
+                {
+                  "type": "ModelRenderer",
+                  "config": {
+                    "modelAssetId": "10",
+                    "animationId": null,
+                    "castShadow": true,
+                    "receiveShadow": true,
+                    "color": "ffffff",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "phong",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0.4999999999999999,
+                "y": 0.5,
+                "z": 0.5,
+                "w": 0.5000000000000001
+              },
+              "scale": {
+                "x": 1,
+                "y": 0.5,
+                "z": 0.6
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "CannonBody",
+              "config": {
+                "mass": 0,
+                "fixedRotation": false,
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 1
+                },
+                "shape": "box",
+                "halfSize": {
+                  "x": 0.6,
+                  "y": 1,
+                  "z": 1
+                },
+                "radius": 1,
+                "height": 1
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": 13.142417311668396,
+            "y": 3.600980579853058,
+            "z": 0.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 1,
+            "w": 6.123233995736766e-17
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "291",
+          "name": "building1",
+          "children": [
+            {
+              "id": "292",
+              "name": "model",
+              "children": [],
+              "components": [
+                {
+                  "type": "ModelRenderer",
+                  "config": {
+                    "modelAssetId": "10",
+                    "animationId": null,
+                    "castShadow": true,
+                    "receiveShadow": true,
+                    "color": "ffffff",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "phong",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0.4999999999999999,
+                "y": 0.5,
+                "z": 0.5,
+                "w": 0.5000000000000001
+              },
+              "scale": {
+                "x": 1,
+                "y": 0.5,
+                "z": 0.6
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "CannonBody",
+              "config": {
+                "mass": 0,
+                "fixedRotation": false,
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 1
+                },
+                "shape": "box",
+                "halfSize": {
+                  "x": 0.6,
+                  "y": 1,
+                  "z": 1
+                },
+                "radius": 1,
+                "height": 1
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": 20.325969099998474,
+            "y": 4.3931925892829895,
+            "z": 0.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "293",
+          "name": "bus stop",
+          "children": [
+            {
+              "id": "294",
+              "name": "model",
+              "children": [],
+              "components": [
+                {
+                  "type": "ModelRenderer",
+                  "config": {
+                    "modelAssetId": "20",
+                    "animationId": null,
+                    "castShadow": true,
+                    "receiveShadow": true,
+                    "color": "c6f8fd",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "phong",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0.4999999999999999,
+                "y": 0.5,
+                "z": 0.5,
+                "w": 0.5000000000000001
+              },
+              "scale": {
+                "x": 0.6,
+                "y": 0.6,
+                "z": 0.6
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "CannonBody",
+              "config": {
+                "mass": 0,
+                "fixedRotation": false,
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 1
+                },
+                "shape": "box",
+                "halfSize": {
+                  "x": 0.3,
+                  "y": 0.6,
+                  "z": 1
+                },
+                "radius": 1,
+                "height": 1
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": 20.31932008266449,
+            "y": 2.332808554172516,
+            "z": 0.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": -0.7071067811865475,
+            "w": 0.7071067811865476
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "295",
+          "name": "bus stop",
+          "children": [
+            {
+              "id": "296",
+              "name": "model",
+              "children": [],
+              "components": [
+                {
+                  "type": "ModelRenderer",
+                  "config": {
+                    "modelAssetId": "20",
+                    "animationId": null,
+                    "castShadow": true,
+                    "receiveShadow": true,
+                    "color": "c6f8fd",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "phong",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0.4999999999999999,
+                "y": 0.5,
+                "z": 0.5,
+                "w": 0.5000000000000001
+              },
+              "scale": {
+                "x": 0.6,
+                "y": 0.6,
+                "z": 0.6
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "CannonBody",
+              "config": {
+                "mass": 0,
+                "fixedRotation": false,
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 1
+                },
+                "shape": "box",
+                "halfSize": {
+                  "x": 0.3,
+                  "y": 0.6,
+                  "z": 1
+                },
+                "radius": 1,
+                "height": 1
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": 13.180846214294434,
+            "y": 5.477136135101318,
+            "z": 0.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0.7071067811865475,
+            "w": 0.7071067811865476
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "297",
+          "name": "building3",
+          "children": [
+            {
+              "id": "298",
+              "name": "model",
+              "children": [],
+              "components": [
+                {
+                  "type": "ModelRenderer",
+                  "config": {
+                    "modelAssetId": "17",
+                    "animationId": null,
+                    "castShadow": true,
+                    "receiveShadow": true,
+                    "color": "59dbcb",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "phong",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0.4999999999999999,
+                "y": 0.5,
+                "z": 0.5,
+                "w": 0.5000000000000001
+              },
+              "scale": {
+                "x": 0.7,
+                "y": 1.1,
+                "z": 0.9
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "CannonBody",
+              "config": {
+                "mass": 0,
+                "fixedRotation": false,
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 1
+                },
+                "shape": "box",
+                "halfSize": {
+                  "x": 0.9,
+                  "y": 0.7,
+                  "z": 1
+                },
+                "radius": 1,
+                "height": 1
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": 14.359815001487732,
+            "y": -2.546698033809662,
+            "z": 0.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 1,
+            "w": 2.220446049250313e-16
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "299",
+          "name": "building3",
+          "children": [
+            {
+              "id": "300",
+              "name": "model",
+              "children": [],
+              "components": [
+                {
+                  "type": "ModelRenderer",
+                  "config": {
+                    "modelAssetId": "17",
+                    "animationId": null,
+                    "castShadow": true,
+                    "receiveShadow": true,
+                    "color": "96e84d",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "phong",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0.4999999999999999,
+                "y": 0.5,
+                "z": 0.5,
+                "w": 0.5000000000000001
+              },
+              "scale": {
+                "x": 0.7,
+                "y": 1.1,
+                "z": 0.9
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "CannonBody",
+              "config": {
+                "mass": 0,
+                "fixedRotation": false,
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 1
+                },
+                "shape": "box",
+                "halfSize": {
+                  "x": 0.9,
+                  "y": 0.7,
+                  "z": 1
+                },
+                "radius": 1,
+                "height": 1
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": 16.13426434993744,
+            "y": -2.546698033809662,
+            "z": 0.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "301",
+          "name": "building3",
+          "children": [
+            {
+              "id": "302",
+              "name": "model",
+              "children": [],
+              "components": [
+                {
+                  "type": "ModelRenderer",
+                  "config": {
+                    "modelAssetId": "17",
+                    "animationId": null,
+                    "castShadow": true,
+                    "receiveShadow": true,
+                    "color": "eecc46",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "phong",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0.4999999999999999,
+                "y": 0.5,
+                "z": 0.5,
+                "w": 0.5000000000000001
+              },
+              "scale": {
+                "x": 0.7,
+                "y": 1.1,
+                "z": 0.9
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "CannonBody",
+              "config": {
+                "mass": 0,
+                "fixedRotation": false,
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 1
+                },
+                "shape": "box",
+                "halfSize": {
+                  "x": 0.9,
+                  "y": 0.7,
+                  "z": 1
+                },
+                "radius": 1,
+                "height": 1
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": 18.204699873924255,
+            "y": -2.546698033809662,
+            "z": 0.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 1,
+            "w": 6.123233995736766e-17
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "303",
+          "name": "building3",
+          "children": [
+            {
+              "id": "304",
+              "name": "model",
+              "children": [],
+              "components": [
+                {
+                  "type": "ModelRenderer",
+                  "config": {
+                    "modelAssetId": "17",
+                    "animationId": null,
+                    "castShadow": true,
+                    "receiveShadow": true,
+                    "color": "975ada",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "phong",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0.4999999999999999,
+                "y": 0.5,
+                "z": 0.5,
+                "w": 0.5000000000000001
+              },
+              "scale": {
+                "x": 0.7,
+                "y": 1.1,
+                "z": 0.9
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "CannonBody",
+              "config": {
+                "mass": 0,
+                "fixedRotation": false,
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 1
+                },
+                "shape": "box",
+                "halfSize": {
+                  "x": 0.9,
+                  "y": 0.7,
+                  "z": 1
+                },
+                "radius": 1,
+                "height": 1
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": 19.868383407592773,
+            "y": -2.5466980934143066,
+            "z": 0.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "305",
+          "name": "building1",
+          "children": [
+            {
+              "id": "306",
+              "name": "model",
+              "children": [],
+              "components": [
+                {
+                  "type": "ModelRenderer",
+                  "config": {
+                    "modelAssetId": "10",
+                    "animationId": null,
+                    "castShadow": true,
+                    "receiveShadow": true,
+                    "color": "87acba",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "phong",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": -5.329070518200751e-15,
+                "y": 0.05521488189697088,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0.4999999999999999,
+                "y": 0.5,
+                "z": 0.5,
+                "w": 0.5000000000000001
+              },
+              "scale": {
+                "x": 2,
+                "y": 1.5,
+                "z": 2
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "CannonBody",
+              "config": {
+                "mass": 0,
+                "fixedRotation": false,
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 1
+                },
+                "shape": "box",
+                "halfSize": {
+                  "x": 2,
+                  "y": 2,
+                  "z": 1
+                },
+                "radius": 1,
+                "height": 1
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": 19.94216477870941,
+            "y": -22.243026196956635,
+            "z": 0.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0.7071067811865475,
+            "w": 0.7071067811865476
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
         }
       ],
-      "components": [],
+      "components": [
+        {
+          "type": "Behavior",
+          "config": {
+            "behaviorName": "WorldRulerBehavior",
+            "propertyValues": {}
+          },
+          "id": "0"
+        }
+      ],
       "position": {
         "x": -1.0133451223373413,
         "y": -0.8194127678871155,

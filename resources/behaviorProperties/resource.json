@@ -21,7 +21,12 @@
       "scriptId": "12",
       "line": 0,
       "parentBehavior": null,
-      "properties": []
+      "properties": [
+        {
+          "name": "objectName",
+          "type": "string"
+        }
+      ]
     },
     "CustomerBehavior": {
       "scriptId": "26",
@@ -38,7 +43,12 @@
       "scriptId": "27",
       "line": 5,
       "parentBehavior": null,
-      "properties": []
+      "properties": [
+        {
+          "name": "night",
+          "type": "boolean"
+        }
+      ]
     }
   }
 }
