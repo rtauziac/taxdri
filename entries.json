@@ -107,6 +107,11 @@
         "id": "32",
         "name": "Mountain",
         "type": "model"
+      },
+      {
+        "id": "33",
+        "name": "Building4",
+        "type": "model"
       }
     ]
   },
