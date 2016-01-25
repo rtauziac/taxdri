@@ -102,6 +102,11 @@
         "id": "29",
         "name": "Stade",
         "type": "model"
+      },
+      {
+        "id": "32",
+        "name": "Mountain",
+        "type": "model"
       }
     ]
   },
