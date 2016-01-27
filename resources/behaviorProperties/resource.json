@@ -41,12 +41,58 @@
     },
     "WorldRulerBehavior": {
       "scriptId": "27",
-      "line": 5,
+      "line": 7,
+      "parentBehavior": null,
+      "properties": []
+    },
+    "LookAtObjectBehavior": {
+      "scriptId": "34",
+      "line": 0,
       "parentBehavior": null,
       "properties": [
         {
-          "name": "night",
+          "name": "objectName",
+          "type": "string"
+        }
+      ]
+    },
+    "SwitchLightBehavior": {
+      "scriptId": "35",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
+    },
+    "SwapTBetweenTwoActorsBehavior": {
+      "scriptId": "36",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "actor1Name",
+          "type": "string"
+        },
+        {
+          "name": "actor2Name",
+          "type": "string"
+        },
+        {
+          "name": "swapActor",
           "type": "boolean"
+        }
+      ]
+    },
+    "HUDBehavior": {
+      "scriptId": "40",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "selectedEntry",
+          "type": "number"
+        },
+        {
+          "name": "entrySize",
+          "type": "number"
         }
       ]
     }

@@ -10,6 +10,10 @@ class CarBehavior extends Sup.Behavior {
     private engineSound: Sup.Audio.SoundPlayer;
 
     awake() {
+        if (WorldConfig.car) {
+            WorldConfig.car.kill();
+        }
+        WorldConfig.car = this;
         this.leftWheel = Sup.getActor("wheel fl");
         this.rightWheel = Sup.getActor("wheel fr");
         this.actor.cannonBody.body.material.friction = 0;
@@ -22,18 +26,21 @@ class CarBehavior extends Sup.Behavior {
     update() {
         const maxTurnRate = 0.06;
         const visualTurnRate = 0.8;
-                
-        if (Sup.Input.wasKeyJustPressed("DOWN")) {
-            if (this.speed < 0.01) {
-                this.moveBackward = true;
+        
+        if (!WorldConfig.pause) {
+            if (Sup.Input.wasKeyJustPressed("DOWN")) {
+                if (this.speed < 0.01) {
+                    this.moveBackward = true;
+                }
             }
-        }
-        if (Sup.Input.wasKeyJustReleased("DOWN")) {
-            this.moveBackward = false;
+            if (Sup.Input.wasKeyJustReleased("DOWN")) {
+                this.moveBackward = false;
+            }
         }
                         
         this.actor.cannonBody.body.angularVelocity = new CANNON.Vec3(0, 0, 0);
-        if (Sup.Input.isKeyDown("LEFT")) {
+        
+        if (!WorldConfig.pause && Sup.Input.isKeyDown("LEFT")) {
             if (!this.moveBackward) {
                 this.turnRate = Math.min(maxTurnRate * Math.min(this.speed/3, 1), this.turnRate + 0.008);                
             }
@@ -43,7 +50,7 @@ class CarBehavior extends Sup.Behavior {
             this.leftWheel.setLocalEulerAngles(0, visualTurnRate, 0);
             this.rightWheel.setLocalEulerAngles(0, visualTurnRate, 0);
         }
-        else if (Sup.Input.isKeyDown("RIGHT")) {
+        else if (!WorldConfig.pause && Sup.Input.isKeyDown("RIGHT")) {
             if (!this.moveBackward) {
                 this.turnRate = Math.max(-maxTurnRate * Math.min(this.speed/3, 1), this.turnRate - 0.008);
             }   
@@ -71,10 +78,10 @@ class CarBehavior extends Sup.Behavior {
         const maxSpeed = 6;
         const accel = 0.13;
         const breaks = 0.8;
-        if (Sup.Input.isKeyDown("UP")) {
+        if (!WorldConfig.pause && Sup.Input.isKeyDown("UP")) {
             this.acceleration = this.speed < maxSpeed ? accel : 0;
         }
-        else if (Sup.Input.isKeyDown("DOWN")) {
+        else if (!WorldConfig.pause && Sup.Input.isKeyDown("DOWN")) {
             if (this.moveBackward) {
                 this.acceleration = this.speed > -maxSpeed/3 ? -accel : 0;
             }
@@ -131,6 +138,10 @@ class CarBehavior extends Sup.Behavior {
 
     public isStopped() {
         return Math.abs(this.speed) < 0.01;
+    }
+
+    kill() {
+        this.engineSound.stop();
     }
 }
 Sup.registerBehavior(CarBehavior);

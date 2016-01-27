@@ -3,7 +3,7 @@
   "nodes": [
     {
       "id": "0",
-      "name": "Car",
+      "name": "Car prefab",
       "children": [
         {
           "id": "1",
@@ -153,6 +153,264 @@
             "x": 0.979,
             "y": -0.466,
             "z": -0.667
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "5",
+          "name": "lightR",
+          "children": [],
+          "components": [
+            {
+              "type": "Light",
+              "config": {
+                "type": "spot",
+                "color": "ffffff",
+                "intensity": 2,
+                "distance": 5,
+                "angle": 23,
+                "target": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "castShadow": true,
+                "shadowMapSize": {
+                  "width": 128,
+                  "height": 128
+                },
+                "shadowBias": 0,
+                "shadowDarkness": 1,
+                "shadowCameraNearPlane": 0.1,
+                "shadowCameraFarPlane": 20,
+                "shadowCameraFov": 60,
+                "shadowCameraSize": {
+                  "top": 100,
+                  "bottom": -100,
+                  "left": -100,
+                  "right": 100
+                }
+              },
+              "id": "0"
+            },
+            {
+              "type": "Behavior",
+              "config": {
+                "behaviorName": "LightTargetSetterBehavior",
+                "propertyValues": {
+                  "objectName": {
+                    "type": "string",
+                    "value": "lightR direction"
+                  }
+                }
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": -0.843999981880188,
+            "y": -1.0805048942565918,
+            "z": 2.558000087738037
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "10",
+          "name": "phareR",
+          "children": [],
+          "components": [
+            {
+              "type": "CubicModelRenderer",
+              "config": {
+                "cubicModelAssetId": "39"
+              },
+              "id": "0"
+            }
+          ],
+          "position": {
+            "x": -0.8330000042915344,
+            "y": -0.10100000351667404,
+            "z": 2.4070000648498535
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1.899999976158142,
+            "y": 0.8700000047683716,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "6",
+          "name": "lightR direction",
+          "children": [],
+          "components": [],
+          "position": {
+            "x": -0.843999981880188,
+            "y": -0.33361032605171204,
+            "z": 6
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "7",
+          "name": "lightL",
+          "children": [],
+          "components": [
+            {
+              "type": "Light",
+              "config": {
+                "type": "spot",
+                "color": "ffffff",
+                "intensity": 2,
+                "distance": 7,
+                "angle": 20,
+                "target": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "castShadow": true,
+                "shadowMapSize": {
+                  "width": 128,
+                  "height": 128
+                },
+                "shadowBias": 0,
+                "shadowDarkness": 1,
+                "shadowCameraNearPlane": 0.1,
+                "shadowCameraFarPlane": 20,
+                "shadowCameraFov": 60,
+                "shadowCameraSize": {
+                  "top": 100,
+                  "bottom": -100,
+                  "left": -100,
+                  "right": 100
+                }
+              },
+              "id": "0"
+            },
+            {
+              "type": "Behavior",
+              "config": {
+                "behaviorName": "LightTargetSetterBehavior",
+                "propertyValues": {
+                  "objectName": {
+                    "type": "string",
+                    "value": "lightL direction"
+                  }
+                }
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": 0.843999981880188,
+            "y": -1.1081403493881226,
+            "z": 2.558000087738037
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "9",
+          "name": "phareL",
+          "children": [],
+          "components": [
+            {
+              "type": "CubicModelRenderer",
+              "config": {
+                "cubicModelAssetId": "39"
+              },
+              "id": "0"
+            }
+          ],
+          "position": {
+            "x": 0.8334063291549683,
+            "y": -0.10057840496301651,
+            "z": 2.4065933227539062
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1.9,
+            "y": 0.87,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "8",
+          "name": "lightL direction",
+          "children": [],
+          "components": [],
+          "position": {
+            "x": 0.843999981880188,
+            "y": -0.34070953726768494,
+            "z": 6
           },
           "orientation": {
             "x": 0,

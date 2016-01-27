@@ -1,32 +1,53 @@
 module WorldConfig {
-    export var carBodyMaterial: CANNON.Material;
-    export var defaultBodyMaterial: CANNON.Material;
+    export var pause = true;
+    export var bgm: Sup.Audio.SoundPlayer;
+    export var worldRuler: WorldRulerBehavior;
+    export var car: CarBehavior;
 }
 
 class WorldRulerBehavior extends Sup.Behavior {
-    night = true
+    private night = false;
     
     awake() {
-        /*WorldConfig.carBodyMaterial = new CANNON.Material("car material");
-        WorldConfig.carBodyMaterial.friction = 0;
-        WorldConfig.defaultBodyMaterial = new CANNON.Material("default material");
-        
-        let worldActor = Sup.getActor("map");
-        worldActor.cannonBody.body.material = WorldConfig.defaultBodyMaterial;
-        let carActor = Sup.getActor("car");
-        carActor.cannonBody.body.material = WorldConfig.carBodyMaterial;
-        
-        let carContactMat = new CANNON.ContactMaterial(WorldConfig.carBodyMaterial, WorldConfig.defaultBodyMaterial, {friction: 0});
-        carActor.cannonBody.body.world.addContactMaterial(carContactMat);*/
-        // Sup.Audio.playSound("Theme").setLoop(true);
-        
-        if (this.night) {
-            //Sup.getActor("sun light").setVisible(false);
-        }
+        WorldConfig.worldRuler = this;
+        this.setNight(false);
+        if (WorldConfig.bgm) { WorldConfig.bgm.stop(); }
+        WorldConfig.bgm = Sup.Audio.playSound("Theme", 1, {loop:true});
     }
 
-    //update() {
+    switchNight() {
+        this.night = !this.night;
+        this.setNight(this.night);
+        return this.night;
+    }
+
+    setNight(night: boolean) {
+        Sup.getActor("lightR").light.setIntensity(night ? 2 : 0);
+        Sup.getActor("lightR").light.setCastShadow(night);
+        Sup.getActor("lightL").light.setIntensity(night ? 2 : 0);
+        Sup.getActor("lightL").light.setCastShadow(night);
+        Sup.getActor("sun light").light.setIntensity(night ? 0 : 1.5);
+        Sup.getActor("phareR").setVisible(night);
+        Sup.getActor("phareL").setVisible(night);
+        Sup.getActor("sun light").light.setCastShadow(!night);
+        Sup.getActor("skybox").cubicModelRenderer.setCubicModel(night ? "Skybox night" : "Skybox day");
+    }
+
+    update() {
+        if (Sup.Input.wasKeyJustPressed("ESCAPE")) {
+            this.switchPause();
+        }
         
-    //}
+        /*if (Sup.Input.wasKeyJustPressed("N")) {
+            this.night = !this.night;
+            this.setNight(this.night);
+        }*/
+    }
+
+    switchPause() {
+        WorldConfig.pause = !WorldConfig.pause;
+        let swap = Sup.getActor("camera").getBehavior(SwapTBetweenTwoActorsBehavior);
+        swap.swapActor = !swap.swapActor;
+    }
 }
 Sup.registerBehavior(WorldRulerBehavior);
