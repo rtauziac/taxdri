@@ -41,7 +41,7 @@
     },
     "WorldRulerBehavior": {
       "scriptId": "27",
-      "line": 7,
+      "line": 8,
       "parentBehavior": null,
       "properties": []
     },
@@ -85,13 +85,31 @@
       "scriptId": "40",
       "line": 0,
       "parentBehavior": null,
+      "properties": []
+    },
+    "HUD2Behavior": {
+      "scriptId": "42",
+      "line": 0,
+      "parentBehavior": null,
       "properties": [
         {
-          "name": "selectedEntry",
+          "name": "totalCustomers",
           "type": "number"
         },
         {
-          "name": "entrySize",
+          "name": "customersCount",
+          "type": "number"
+        },
+        {
+          "name": "tick",
+          "type": "number"
+        },
+        {
+          "name": "timerStartTick",
+          "type": "number"
+        },
+        {
+          "name": "timerEndTick",
           "type": "number"
         }
       ]

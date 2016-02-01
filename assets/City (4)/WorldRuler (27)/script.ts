@@ -3,6 +3,7 @@ module WorldConfig {
     export var bgm: Sup.Audio.SoundPlayer;
     export var worldRuler: WorldRulerBehavior;
     export var car: CarBehavior;
+    export var hud2: HUD2Behavior;
 }
 
 class WorldRulerBehavior extends Sup.Behavior {

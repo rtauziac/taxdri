@@ -1,7 +1,7 @@
 class HUDBehavior extends Sup.Behavior {
-    selectedEntry = 0;
-    children: Sup.Actor[];
-    entrySize = 0;
+    private selectedEntry = 0;
+    private children: Sup.Actor[];
+    private entrySize = 0;
     
     awake() {
         this.children = this.actor.getChildren();

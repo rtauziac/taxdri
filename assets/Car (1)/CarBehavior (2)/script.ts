@@ -127,6 +127,7 @@ class CarBehavior extends Sup.Behavior {
     public takeCustomer(customer: CustomerBehavior) {
         if (this.isStopped() && this.customer == null) {
                 this.customer = customer
+                WorldConfig.hud2.startTimer();
                 return true;
         }
         return false;
@@ -134,6 +135,7 @@ class CarBehavior extends Sup.Behavior {
 
     public customerGetOut() {
         this.customer = null;
+        WorldConfig.hud2.addCustomer();
     }
 
     public isStopped() {
