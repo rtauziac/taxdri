@@ -178,6 +178,11 @@
     "type": "scene"
   },
   {
+    "id": "43",
+    "name": "Shader",
+    "type": "shader"
+  },
+  {
     "id": "37",
     "name": "Skybox day",
     "type": "cubicModel"
